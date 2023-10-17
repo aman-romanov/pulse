@@ -1,0 +1,352 @@
+.header
+    position: relative
+    &__wrapper
+        position: absolute
+        left: 530px
+        top: 21px
+        transform: translateX(-30%)
+        display: flex
+        justify-content: space-between
+        align-items: center 
+        width: 950px
+    &__logo-link
+        display: block
+        width: 250px
+        img
+            width: 100%
+    &-info
+        &__sub-text
+            color: #FFF
+            text-align: center
+            font-size: 12px
+            font-weight: 500
+        &__text
+            color: #FFF
+            text-align: center
+            font-size: 18px
+            font-weight: 500
+    &-phone
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        &__number
+            color: #FFF
+            text-align: right
+            font-size: 18px
+            font-weight: 700
+            text-decoration: none
+        &__cta
+            @include pulse_btn
+            width: 153px
+            height: 32px
+            font-size: 12px
+.hero
+    height: 650px
+    background: url(../img/hero_bg.png) center (center/cover) no-repeat
+    &__wrapper
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+    &__header
+        margin-top: 175px
+        margin-bottom: 0px
+        color: #FFF
+        text-align: right
+        font-size: 42px
+        font-weight: 700
+        text-transform: uppercase
+    &__subheader
+        margin-top: 7px
+        color: #FFF
+        text-align: right
+        font-size: 24px
+        font-weight: 500
+        text-transform: uppercase
+    &__icons
+        display: flex
+        width: 424px
+        margin-top: 60px
+        justify-content: space-between
+        align-items: center
+    &__icon
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 136px
+        img
+            width: 50px
+        &_descr
+            margin-top: 20px
+            color: #FFF
+            text-align: center
+            font-size: 14px
+            font-weight: 500
+    &__btn
+        @include pulse_btn
+        margin-top: 80px
+        padding: 12px 28px
+        width: 300px
+        height: 50px  
+        color: #FFF
+        text-align: center
+        font-size: 16px
+        font-weight: 500
+        text-transform: uppercase
+    &__link
+        margin-top: 10px
+        color: #FFF
+        text-align: center
+        font-size: 14px
+        font-weight: 500
+        a
+            color: #FFF
+            text-align: center
+            font-size: 14px
+            font-weight: 500
+            text-decoration: underline
+            text-transform: uppercase
+.advantages
+    height: 473px
+    padding: 70px 0 80px 0
+    background-color: #F6F6F6
+    &__title
+        color: #0D0D0D
+        text-align: center
+        font-size: 30px
+        font-weight: 700
+    &__list
+        display: flex
+        justify-content: space-between
+        margin-top: 65px
+    &__item
+        display: flex
+        flex-direction: column
+        align-items: center
+        max-width: 287px
+        .item__header
+            color: #0D0D0D
+            text-align: center
+            font-size: 18px
+            font-weight: 700
+            margin-top: 30px
+        .item__descr
+            @include pulse_text
+            text-align: center
+            margin-top: 26px
+            font-size: 14px
+            a
+                color: $red
+.consultation
+    height: 680px
+    background: url(../../img/cta_bg.png) center (center/cover) no-repeat
+    padding: 100px 0
+    &__title
+        color: #FFF
+        font-size: 36px
+        font-weight: 700
+        text-transform: uppercase
+        text-align: left
+        line-height: 54px
+    &__text
+        +pulse_text
+        color: #FFF
+        text-align: left
+        letter-spacing: 1px
+    &__form
+        margin-top: 26px
+        display: flex
+        flex-direction: column
+        align-items: left
+        input
+            width: 303px
+            height: 54px
+            margin-top: 10px
+            border-radius: 6px
+            padding-left: 20px
+            background-color: #fff
+            color: #4B4B4B
+            font-size: 14px
+            font-weight: 400
+            border: none
+    &__btn
+        +pulse_btn
+        width: 303px
+        height: 58px
+        font-size: 16px
+        font-weight: 500
+        margin-top: 17px
+
+.carousel
+    padding: 107px 0
+    &__widget
+        position: relative
+        width: 750px
+        margin: 0 auto
+    .slick-prev
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: -70px
+        border: none
+        background-color: #fff
+        span
+            font-size: 40px
+            color: $red
+    .slick-next
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: -66px
+        border: none
+        background-color: #fff
+        span
+            font-size: 40px
+            color: $red
+
+.catalog
+    &__title
+        color: #0D0D0D
+        text-align: center
+        font-size: 30px
+        font-weight: 400
+        text-transform: uppercase
+    &__tabs
+        margin-top: 46px
+        display: flex
+        justify-content: center
+        list-style-type: none 
+    &__tab
+        width: 222px
+        height: 52px
+        border: 2px solid #D0D0D0
+        transform: skewX(-25deg)
+        &:nth-child(2)
+            margin: 0 10px 0 10px
+        div
+            transform: skewX(25deg)
+            color: #6B6B6B
+            text-align: center
+            font-size: 18px
+            font-style: normal
+            font-weight: 400
+            text-transform: uppercase
+            line-height: 50px
+        &:hover
+            border: 2px solid $red
+            div
+                color: $red
+        &_active
+            background-color: $red
+            border: none
+            div
+                color: #fff   
+        &_active:hover
+            border: 2px solid #D0D0D0
+            div
+                color: #fff 
+    &__content
+        margin-top: 38px
+        display: none
+        opacity: 0
+        flex-wrap: wrap
+        transition: 0.5s all
+        &_active
+            display: flex
+            opacity: 100%
+    .item
+        width: 303px
+        min-height: 442px
+        border: 2px solid #E8E8E8
+        padding: 20px 26px 20px 27px
+        overflow: hidden
+        margin-bottom: 19px
+        &:nth-child(2)
+            margin-left: 17px
+            margin-right: 20px
+        &:nth-child(5)
+            margin-left: 17px
+            margin-right: 20px
+        &__wrapper
+            display: flex
+            width: calc( 200% + 20px )
+        &__view
+            width: 50%
+            margin-right: 0px
+            transform: translateX(-110%)
+            transition: 0.5s transform
+            &_active
+                transform: translateX(0%)
+                margin-right: 20px
+        &__info
+            position: relative
+            transform: translateX(10%)
+            width: 50%
+            margin-left: 10px
+            transition: 0.5s transform
+            &_active
+                transform: translateX(-100%)
+                margin-left: 0px
+            &_list
+                list-style-type: none
+                position: relative
+                margin-left: 17px
+                padding-left: 0
+                padding-bottom: 0
+                li
+                    position: relative
+                    color: #555
+                    font-size: 14px
+                    font-weight: 300
+                    margin-bottom: 10px
+                    &::before
+                        content: ''
+                        display: block
+                        position: absolute
+                        left: -19px
+                        top: 6px
+                        width: 8px
+                        height: 8px
+                        background-color: $red
+            &_return
+                +pulse_link
+                position: absolute
+                bottom: 0px
+                left: 90px
+        &__img
+            display: block
+            margin: 0 auto
+        &__name
+            margin-top: 15px
+            color: #0D0D0D
+            text-align: center
+            font-size: 16px
+            font-weight: 700
+        &__descr
+            color: #0D0D0D
+            text-align: center
+            font-size: 14px
+            font-weight: 300
+            margin-top: 15px
+        &__link
+            margin-top: 10px
+            +pulse_link
+        hr
+            background-color: #c4c4c4
+            margin: 17px 0 17px 0
+        &__cta
+            display: flex
+            justify-content: space-between
+            align-items: center
+        &__old-price
+            color: #555
+            font-size: 14px
+            font-weight: 300
+            text-decoration: line-through
+        &__price
+            color: #050505
+            font-size: 20px
+            font-weight: 700
+        &__btn
+            +pulse_btn
+            width: 135px
+            height: 44px

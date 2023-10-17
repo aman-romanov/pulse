@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Museo Moderno', sans-serif;
+    src: local('MuseoModerno-Light'),
+        url(../fonts/MuseoModerno-Light.ttf), format(ttf);
+    font-weight: 300;
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'Museo Moderno', sans-serif;
+    src: local('MuseoModerno-Regular'),
+        url(../fonts/MuseoModerno-Regular.ttf), format(ttf);
+    font-weight: 400;
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'Museo Moderno', sans-serif;
+    src: local('MuseoModerno-Meduim'),
+        url(../fonts/MuseoModerno-Meduim.ttf), format(ttf);
+    font-weight: 500;
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: 'Museo Moderno', sans-serif;
+    src: local('MuseoModerno-Bold'),
+        url(../fonts/MuseoModerno-Bold.ttf), format(ttf);
+    font-weight: 700;
+    font-style: normal; 
+}
