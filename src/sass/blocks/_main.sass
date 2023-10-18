@@ -408,6 +408,9 @@
         font-weight: 700
         text-decoration: none
         margin-top: 36px
+        &:hover
+            text-decoration: underline
+            color: #FFF
     &__socials
         margin-top: 36px
         margin-left: 69px
@@ -416,12 +419,15 @@
         align-items: center
         width: 212px
     &__icons
-        display: block
+        display: flex
+        justify-content: center
+        align-items: center
         height: 52px
-        border: #fff 1px
+        width: 52px
+        border: 2px solid #ffffff
         border-radius: 100%
         text-decoration: none
-        span
+        img
             display: block
             text-decoration: none
             color: #fff
