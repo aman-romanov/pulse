@@ -24,4 +24,5 @@ $(document).ready(function(){
 
     toggleSlide('.item__link');
     toggleSlide('.item__info_return');
+    
   });
