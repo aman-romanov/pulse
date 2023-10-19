@@ -35,6 +35,9 @@
             font-size: 18px
             font-weight: 700
             text-decoration: none
+            &:hover
+                text-decoration: underline
+                color: #FFF
         &__cta
             @include pulse_btn
             width: 153px
@@ -105,6 +108,8 @@
             font-weight: 500
             text-decoration: underline
             text-transform: uppercase
+            &:hover
+                color: $red
 .advantages
     height: 473px
     padding: 70px 0 80px 0
@@ -153,21 +158,10 @@
         text-align: left
         letter-spacing: 1px
     &__form
-        margin-top: 26px
+        +pulse_form
         display: flex
         flex-direction: column
         align-items: left
-        input
-            width: 303px
-            height: 54px
-            margin-top: 10px
-            border-radius: 6px
-            padding-left: 20px
-            background-color: #fff
-            color: #4B4B4B
-            font-size: 14px
-            font-weight: 400
-            border: none
     &__btn
         +pulse_btn
         width: 303px
@@ -432,4 +426,53 @@
             text-decoration: none
             color: #fff
 
+.overlay
+    display: none
+    position: fixed
+    top: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0,0,0, .4)
+.modal
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    padding: 35px 40px 40px 40px
+    width: 382px
+    height: 402px
+    background-color: #F2F2F2
+    display: none
+    &__close-icon
+        font-size: 31px
+        line-height: 20px
+        color: $red
+        position: absolute
+        top: 0
+        left: calc( 100% + 15px )
+        cursor: pointer
+    &__title
+        color: #0D0D0D
+        text-align: center
+        font-size: 18px
+        font-weight: 700
+    &__text
+        color: #0D0D0D
+        text-align: center
+        font-size: 14px
+        font-weight: 700
+    &__form
+        +pulse_form
+        margin-top: 20px
+
+.modal_thanks
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    padding: 35px 40px 40px 40px
+    width: 382px
+    height: 143px
+    background-color: #F2F2F2
+    display: none
 

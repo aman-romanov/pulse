@@ -25,4 +25,19 @@ $(document).ready(function(){
     toggleSlide('.item__link');
     toggleSlide('.item__info_return');
     
+    $('[data-module=consultation]').on('click', function(){
+        $('.overlay, #consultation').fadeIn('slow');
+
+    });
+
+    $('.modal__close-icon').on('click', function(){
+        $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
+    });
+
+    $('.item__btn').each(function(i){
+        $(this).on('click', function() {
+            $('#order .modal__text').text($('.item__name').eq(i).text());
+            $('.overlay, #order').fadeIn('slow');
+        });
+    })
   });
