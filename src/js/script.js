@@ -1,5 +1,3 @@
-const { registry } = require("gulp");
-
 $(document).ready(function(){
     $('.carousel__widget').slick({
         infinite: true,
