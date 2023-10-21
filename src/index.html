@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,7 +48,7 @@
                             </div>
                         </div>
                         <button data-module="consultation" class="hero__btn">заказать кОНСУЛЬТАЦИЮ</button>
-                        <div class="hero__link">или <a href="#catalog">ПЕРЕЙТИ В КАТАЛОГ</a> </div>
+                        <div class="hero__link">или <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a> </div>
                     </div>
                 </div>
         </section> 
@@ -86,10 +86,11 @@
                     </div>
                     <form action="" class="consultation__form">
                         <input type="text" name="name" placeholder="Ваше имя">
-                        <input name="phone" placeholder="Ваш телефон">
+                        <input type="phone" name="phone" placeholder="Ваш телефон">
                         <input type="email" name="email" placeholder="Ваш E-mail">
                         <button class="consultation__btn">заказать кОНСУЛЬТАЦИЮ</button>
                     </form>
+                    <button class="consultation__btn">заказать кОНСУЛЬТАЦИЮ</button>
                 </div>
         </section>
         <section class="carousel">
@@ -101,7 +102,7 @@
                 </div>
             </div>
         </section>
-        <section class="catalog" id="catalog" >
+        <section class="catalog">
             <div class="container">
                 <div class="catalog__title">
                     Каталог пульсометров
@@ -505,10 +506,11 @@
                 </div>
                 <form action="" class="modal__form">
                     <input type="text" name="name" placeholder="Ваше имя">
-                    <input name="phone" placeholder="Ваш телефон">
+                    <input type="phone" name="phone" placeholder="Ваш телефон">
                     <input type="email" name="email" placeholder="Ваш E-mail">
                     <button class="consultation__btn">заказать кОНСУЛЬТАЦИЮ</button>
                 </form>
+                <button class="consultation__btn">заказать кОНСУЛЬТАЦИЮ</button>
             </div>
 
             <div class="modal" id="order" >
@@ -520,11 +522,11 @@
                     
                 </div>
                 <form action="" class="modal__form">
-                    <input type="text" name="name" placeholder="Ваше имя">
-                    <input name="phone" placeholder="Ваш телефон">
-                    <input type="email" name="email" placeholder="Ваш E-mail">
-                    <button class="consultation__btn">Купить</button>
+                    <input type="text" name="name" required placeholder="Ваше имя">
+                    <input type="phone" name="phone" required placeholder="Ваш телефон">
+                    <input type="email" name="email" required placeholder="Ваш E-mail">
                 </form>
+                <button class="consultation__btn">Купить</button>
             </div>
 
             <div class="modal modal_thanks" id="thanks">
@@ -543,7 +545,6 @@
         <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script src="js/slick.js"></script>
         <script src="js/jquery.validate.min.js"></script>
-        <script src="js/jquery.maskedinput.min.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>
