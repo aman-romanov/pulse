@@ -1,3 +1,5 @@
+const { registry } = require("gulp");
+
 $(document).ready(function(){
     $('.carousel__widget').slick({
         infinite: true,
@@ -41,14 +43,21 @@ $(document).ready(function(){
         });
     })
 
+    jQuery.validator.addMethod("lettersonly", function(value, element) {
+        return this.optional(element) || /^[а-я-]+$/i.test(value);
+      }, "Введите корректное имя"); 
+
     function validateForms(form){
         $(form).validate({
             rules: {
                 name: {
                     required: true,
-                    minlength: 2
+                    minlength: 2,
+                    lettersonly: true
                 },
-                phone: 'required',
+                phone: {
+                    required: true,
+                },
                 email: {
                     required: true,
                     email: true
@@ -59,7 +68,10 @@ $(document).ready(function(){
                     required: "Пожалуйста, введите свое имя",
                     minlength: jQuery.validator.format("Введите {0} символа!")
                   },
-                phone: "Пожалуйста, введите свой номер телефона",
+                phone: {
+                    required: "Пожалуйста, введите свой номер телефона",
+                    digits: "Введите корректный номер телефона"
+                },
                 email: {
                   required: "Пожалуйста, введите свою почту",
                   email: "Неправильно введен адрес почты"
@@ -73,5 +85,23 @@ $(document).ready(function(){
     validateForms('#consultation .modal__form');
     validateForms('#order .modal__form');
 
+    $('input[name=phone]').mask("+7 (999) 999-9999");
 
+    $('form').submit(function(e) {
+        e.preventDefault();
+        if(!$(this).validate()){
+            return;
+        }
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+            $('#consultation, #order').fadeOut('slow');
+            $('.overlay, #thanks').fadeIn('slow');
+            $('form').trigger('reset');
+        });
+        return false;
+    });
   });
